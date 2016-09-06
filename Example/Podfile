@@ -1,0 +1,14 @@
+use_frameworks!
+
+target 'MTCoordinatorView-objc_Example' do
+  pod 'MTCoordinatorView-objc', :path => '../'
+
+  target 'MTCoordinatorView-objc_Tests' do
+    inherit! :search_paths
+
+    pod 'Specta'
+  pod 'Expecta'
+  pod 'FBSnapshotTestCase'
+  pod 'Expecta+Snapshots'
+  end
+end
