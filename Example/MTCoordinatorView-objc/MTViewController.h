@@ -6,8 +6,8 @@
 //  Copyright (c) 2016 mittsu. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
-@interface MTViewController : UIViewController
+@interface MTViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
 @end

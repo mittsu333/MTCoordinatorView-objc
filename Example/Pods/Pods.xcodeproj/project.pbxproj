@@ -36,7 +36,6 @@
 		260BC7EED9289AF321A6F791964CE472 /* EXPMatchers+respondTo.h in Headers */ = {isa = PBXBuildFile; fileRef = 158CEFBA77071AB835E435120F4CE616 /* EXPMatchers+respondTo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		285A7737509FDE37F1A135BBD378D26F /* SpectaUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE880572CC4AF9A3FB007D3FBAB3FC9 /* SpectaUtility.m */; };
 		2916A0606136A9DC67F2463AB230868B /* EXPMatchers+match.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BE7EA43918F8547CCF8A9EABF75B788 /* EXPMatchers+match.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		29E484AB194748561FA32B96763667BB /* MTCoordinatorView-objc-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE889C54D4A0E4E77959DE969B0CC97A /* MTCoordinatorView-objc-dummy.m */; };
 		2C0A8737FDB9B9C6A6BDF437FD11334C /* EXPMatchers+beNil.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFE305560483772516B366088F6E2B4 /* EXPMatchers+beNil.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2CFE2898496C1C7096DB8DA43AF19103 /* EXPMatchers+raise.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA78AD493C15517AB45ED930E51A1E0 /* EXPMatchers+raise.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2D0294A1F074AD370FDFE53FF14199AC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91586D3A3189105EA02BDC177F9348B2 /* XCTest.framework */; };
@@ -51,6 +50,7 @@
 		3B3E45A9EEC0318BE005272CCB67AF5B /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD199F953A76C011AAE0FEC9C76880F /* FBSnapshotTestCase-dummy.m */; };
 		3B5B7495707BF7133B9FB3F834045611 /* EXPBlockDefinedMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 1795ED3D682D8EDC5CEC1EA831BEECEA /* EXPBlockDefinedMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C2700C7DAA15C6AF84A595865C42F4D /* EXPMatchers+contain.h in Headers */ = {isa = PBXBuildFile; fileRef = F6ACA95F6EDBB1752AADF70C323E1E5F /* EXPMatchers+contain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D98CADE26F164088E7F19E396A433D6 /* MTCoordinatorView-objc-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BAD70D960054AA7D9F8840A5FD297A1 /* MTCoordinatorView-objc-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		403292D82DA62291204BF59524BC4EDB /* EXPMatchers+haveCountOf.m in Sources */ = {isa = PBXBuildFile; fileRef = 5267376A130B688AA8DC669933C16D9A /* EXPMatchers+haveCountOf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4111EEC75486A8A5BACB2A39E575DD7F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91586D3A3189105EA02BDC177F9348B2 /* XCTest.framework */; };
 		46137F5CC368BF38BAF0D0AF81DD8FFE /* EXPMatchers+raise.h in Headers */ = {isa = PBXBuildFile; fileRef = D2F336ECC66909E2FC05C8E3D376CF12 /* EXPMatchers+raise.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -64,6 +64,7 @@
 		525E330ABAF38C99E333F1E9F05ED7FA /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 389932E25AB5180C7024CD173A4B6D4B /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		528A0A47EAF1796C232B5B64B3039896 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6E6C6CD2E4105AE9595FA4CC6137C /* FBSnapshotTestCase.m */; };
 		53D1DB3FB97B1CC736F2B9C4D5D6F728 /* SPTExample.h in Headers */ = {isa = PBXBuildFile; fileRef = E5970E5D763F65673B9F5F4C5D0A9D0F /* SPTExample.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54065BC9EA8BEA4547C508C8161654B2 /* CoordinateManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C9B7685C57C643D9EBAD0B375C42FDA /* CoordinateManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5462F4C615AB01D381D1C6D9B379239F /* SPTExampleGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = E5B05516F560C08699BF135F729DD5E4 /* SPTExampleGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55CB3993414921E30DD6D8C6961AF6F7 /* Pods-MTCoordinatorView-objc_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D2E1B7322BB0CA842FF832CA525414 /* Pods-MTCoordinatorView-objc_Tests-dummy.m */; };
 		585E0FA74D1DE7DF2A410BE4F29097DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECD67EDF1A4A8EC7AD037B348F6A35EE /* UIKit.framework */; };
@@ -90,14 +91,9 @@
 		81F30F14BE5F521419A9843F14A99258 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB0E4EAB26DF11F1DE60103A194FD94 /* Foundation.framework */; };
 		831A55B0C6A89613B5DDEAB7B6947B22 /* SPTGlobalBeforeAfterEach.h in Headers */ = {isa = PBXBuildFile; fileRef = 0160D7EDEB19856BC505CA9E9075EC06 /* SPTGlobalBeforeAfterEach.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		837B593D7C1D01B4EA400247309D6AB0 /* Expecta-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 370C8488ABDC015700FCF97F059BFD42 /* Expecta-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		841FD17A1A06B1CFA3E3B8CF6DABF62D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB0E4EAB26DF11F1DE60103A194FD94 /* Foundation.framework */; };
 		85E31076D5530AEEB45ACF16B2B8A983 /* EXPMatchers.h in Headers */ = {isa = PBXBuildFile; fileRef = D23BC3A3A95CE0E0D9D4237760C716E8 /* EXPMatchers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		85EB2F216487CB2E8F3FCCFBC4D69912 /* EXPMatchers+beTruthy.h in Headers */ = {isa = PBXBuildFile; fileRef = A9AD646C1FEAB8503FF6D57F404BC0E6 /* EXPMatchers+beTruthy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		87FD5F0F682CDEB6A348CA448889E3EA /* EXPMatchers+beKindOf.m in Sources */ = {isa = PBXBuildFile; fileRef = C04E3E80E2CD18DEAE104F67CE80B85A /* EXPMatchers+beKindOf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8949A5711D7F2085002F4BD7 /* CoordinateContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8949A56D1D7F2085002F4BD7 /* CoordinateContainer.h */; };
-		8949A5721D7F2085002F4BD7 /* CoordinateContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8949A56E1D7F2085002F4BD7 /* CoordinateContainer.m */; };
-		8949A5731D7F2085002F4BD7 /* CoordinateManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8949A56F1D7F2085002F4BD7 /* CoordinateManager.h */; };
-		8949A5741D7F2085002F4BD7 /* CoordinateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8949A5701D7F2085002F4BD7 /* CoordinateManager.m */; };
 		89F936CCD20573059DBBAF5759D4D7F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB0E4EAB26DF11F1DE60103A194FD94 /* Foundation.framework */; };
 		8BAF175C6F35AB44B5D8139CE70A376B /* Specta-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D657B34A1C94FBF176F35C1081FD8A9 /* Specta-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C8C1B0D83FE6A4352F15154DB16372C /* EXPMatcherHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 237C1D40E94ECB9726EC1CC5E6691588 /* EXPMatcherHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -105,6 +101,7 @@
 		931D410B9F8ACB935883DF8C59F9C93E /* EXPMatchers+postNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7D54F2046B9323D0CB2748E382BAA3 /* EXPMatchers+postNotification.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		940B9314A543B3DD3E2D9608D41AC38D /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E47922AA0F6D472C6BD29B15DF2DE148 /* Expecta.framework */; };
 		94C47C87E397972CE98F75929F3B706C /* ExpectaObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C4016D8E6902B23AF2CA1BB3EBE78467 /* ExpectaObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		960F4C2D00113F587C0C317C9CD50A9B /* CoordinateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BF47FE690CDC1B662DED39FFB1B4F7 /* CoordinateManager.m */; };
 		9639568D4B33614BA93E101C138A973B /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = D417CB778FB662CFE79DB7FD9E6554A8 /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		987C93E1446CF9DF3A324BAB4A94F982 /* Specta.h in Headers */ = {isa = PBXBuildFile; fileRef = FB362E8DBE566CD58ABD4124535F2081 /* Specta.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B2E761A064459F77EA9870BEF03ACC3 /* EXPMatchers+postNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = 431B770DD18C6C810E0ECD250D063471 /* EXPMatchers+postNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -116,6 +113,7 @@
 		AC56B4DF5F0181E6656E4C16A1BA2CA2 /* Pods-MTCoordinatorView-objc_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 071D8748E7666A07E85FB84C4C854596 /* Pods-MTCoordinatorView-objc_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC9CE0ECC78F93770B8007D360389BAB /* XCTestCase+Specta.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C35331B5791C85920198E31A6E6396 /* XCTestCase+Specta.m */; };
 		AD3D61DCB1A9A6243C8407CFFD0B1008 /* Pods-MTCoordinatorView-objc_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C18CF56B881F8DF5351FB12545C2AC86 /* Pods-MTCoordinatorView-objc_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADA040DBA9097068AEF4D860916C75F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB0E4EAB26DF11F1DE60103A194FD94 /* Foundation.framework */; };
 		AF1F46668D4591602887998C6E9C10AD /* EXPMatchers+beCloseTo.h in Headers */ = {isa = PBXBuildFile; fileRef = 99C6B238F553535C865A990AB217F102 /* EXPMatchers+beCloseTo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AFFC8900E52BBEC72059334132F3A8F3 /* ExpectaSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B52C3887A118767CC0A773555B7C029 /* ExpectaSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1A21DB7494006EA8646A9897878AD64 /* SPTTestSuite.h in Headers */ = {isa = PBXBuildFile; fileRef = BEC4D7D2259B4B710DED71BD7949BACA /* SPTTestSuite.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -128,7 +126,6 @@
 		BC55C8365AEFF8217F6A567607754854 /* EXPDoubleTuple.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E348D84229E9000F93233339AFC317B /* EXPDoubleTuple.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BEFFE9FFE52E9A0833A7D2D8FB67EB4D /* EXPMatchers+beSubclassOf.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D9D3D0C96D5284831B2C833DD79A36 /* EXPMatchers+beSubclassOf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BF5CBA35330C8DD24489E35F1EDC0840 /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = F787B4263348644844F9D18CCBA4A124 /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C5FC0161D53FDFC0A40DABE1AB8EA3D3 /* MTCoordinatorView-objc-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BAD70D960054AA7D9F8840A5FD297A1 /* MTCoordinatorView-objc-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C608154760BF6085D2ECA64B22A89D8B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91586D3A3189105EA02BDC177F9348B2 /* XCTest.framework */; };
 		CD445FF2FDF3698A06F1FD16F917EFB9 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 39686FFA13DAF68BB30B71BF78A974C3 /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		CE3F4ECBB0BC095577D66AE50C8E604C /* EXPFloatTuple.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AF203F6B98E185A822F5F0BC6DB151 /* EXPFloatTuple.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -141,13 +138,16 @@
 		E0A077DFB064B79685B810CCEFB2F1EF /* EXPMatchers+respondTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BE855C76546F434D61EAC92F2988BD /* EXPMatchers+respondTo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E0AAF49134A0505DF00E20E7B62087E1 /* EXPMatchers+beIdenticalTo.h in Headers */ = {isa = PBXBuildFile; fileRef = 959C603B0B7FDCFBCEC10840D84C91CE /* EXPMatchers+beIdenticalTo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E1EC4532663CA75DE5BD00CB0A56814D /* Expecta.h in Headers */ = {isa = PBXBuildFile; fileRef = D148E142A756A0CD8BA055B657862814 /* Expecta.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E31659C8BCFAC7C76ED9386EC1671F49 /* CoordinateContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = CC772D832F84D77D6B70692F8CD8FB4E /* CoordinateContainer.m */; };
 		E3420A5D13A34437CDA489C92B35B5B9 /* SPTExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C75DFE8C463E28459A9A9DD7E921822 /* SPTExample.m */; };
 		E735386085CE344F6A01178CF4763852 /* EXPMatchers+beNil.h in Headers */ = {isa = PBXBuildFile; fileRef = 28980D1268BF5D8196D266D4FC2F50E4 /* EXPMatchers+beNil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E80402E273DABACF383A1593E820DBEC /* SPTExcludeGlobalBeforeAfterEach.h in Headers */ = {isa = PBXBuildFile; fileRef = 5514D13D44B78009D4AFEEDFA4E4FDBB /* SPTExcludeGlobalBeforeAfterEach.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9694D5930497F2FCDB95A84D1DB4AC6 /* CoordinateContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A3AEDCC3543C55DAB4F2F31234CF77 /* CoordinateContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA0770E69CB71A0D09E9AC394D41154C /* SPTExampleGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 707C1B7180164DF6560719973AEC92C1 /* SPTExampleGroup.m */; };
 		EA117F4DD0188BBAF6228760940337B5 /* SPTSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = BF701C1C8F03B74819BFFD19C9DEA426 /* SPTSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF6497EE123F6BC0C1B09717437C5908 /* EXPUnsupportedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D21C236068062A9C4DDD612C5A3467B /* EXPUnsupportedObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EF81FC482C211F7952F51C009A4FAAE1 /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 42785F13EF84B082ACE2FE7CAE842881 /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F0DD7DADE310C18D475CBE516CAA2F7C /* MTCoordinatorView-objc-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE889C54D4A0E4E77959DE969B0CC97A /* MTCoordinatorView-objc-dummy.m */; };
 		F0DDF02A078B917997FF025BB33BB842 /* EXPMatchers+conformTo.h in Headers */ = {isa = PBXBuildFile; fileRef = 15EE63300C3D43B1B92124CD21806E8C /* EXPMatchers+conformTo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F12D57414A73406831CC032A7170DBFF /* EXPMatchers+beginWith.m in Sources */ = {isa = PBXBuildFile; fileRef = 91453F85BD953E023DC76351FFEA1D94 /* EXPMatchers+beginWith.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F3A65225B4F30C97B32952D3297BDC31 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15181A2A90AA8A9F24D97664729A1B2 /* SwiftSupport.swift */; };
@@ -193,7 +193,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 117304345C5768700DFA1C4121D8ACC0;
+			remoteGlobalIDString = D2FAF3B045AC73D3B54C5BB832983AB6;
 			remoteInfo = "MTCoordinatorView-objc";
 		};
 		30E8A82CA1CD22017EA9D8DF2CEC2541 /* PBXContainerItemProxy */ = {
@@ -313,12 +313,9 @@
 		7EF2072991CBA5987025178150BD49F6 /* EXPMatchers+endWith.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+endWith.m"; path = "Expecta/Matchers/EXPMatchers+endWith.m"; sourceTree = "<group>"; };
 		7F5D1A0E9BD4DDFBC87E078DEC833A16 /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
 		827940DAD186863374E719CC8D5FCE23 /* SPTCallSite.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTCallSite.m; path = Specta/Specta/SPTCallSite.m; sourceTree = "<group>"; };
-		8949A56D1D7F2085002F4BD7 /* CoordinateContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoordinateContainer.h; sourceTree = "<group>"; };
-		8949A56E1D7F2085002F4BD7 /* CoordinateContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoordinateContainer.m; sourceTree = "<group>"; };
-		8949A56F1D7F2085002F4BD7 /* CoordinateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoordinateManager.h; sourceTree = "<group>"; };
-		8949A5701D7F2085002F4BD7 /* CoordinateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoordinateManager.m; sourceTree = "<group>"; };
 		89B6E0CDB8A3F428FFD3D7D74A441B28 /* Pods-MTCoordinatorView-objc_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MTCoordinatorView-objc_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8B52C3887A118767CC0A773555B7C029 /* ExpectaSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ExpectaSupport.h; path = Expecta/ExpectaSupport.h; sourceTree = "<group>"; };
+		8C9B7685C57C643D9EBAD0B375C42FDA /* CoordinateManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CoordinateManager.h; sourceTree = "<group>"; };
 		8CE42337022021AE45B4E067D494C32F /* EXPUnsupportedObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPUnsupportedObject.h; path = Expecta/EXPUnsupportedObject.h; sourceTree = "<group>"; };
 		8F63B0FF272D1EB750D82F3EADA2D2CA /* EXPExpect.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPExpect.h; path = Expecta/EXPExpect.h; sourceTree = "<group>"; };
 		91453F85BD953E023DC76351FFEA1D94 /* EXPMatchers+beginWith.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beginWith.m"; path = "Expecta/Matchers/EXPMatchers+beginWith.m"; sourceTree = "<group>"; };
@@ -333,6 +330,7 @@
 		9DC5EEA6B4746F1531DD69BC488E69F4 /* SPTTestSuite.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTTestSuite.m; path = Specta/Specta/SPTTestSuite.m; sourceTree = "<group>"; };
 		A193DEFA4D1CD24BE0FE7815E44EC372 /* Expecta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Expecta.xcconfig; sourceTree = "<group>"; };
 		A29BA8C3E774C364BD56A4AAFFF1E6AA /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
+		A2BF47FE690CDC1B662DED39FFB1B4F7 /* CoordinateManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CoordinateManager.m; sourceTree = "<group>"; };
 		A3DCA22418462A5FB61DC3990741E510 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A54AE821E3D5E7DF7DA3ED83AF9B4AF2 /* EXPMatchers+beGreaterThan.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beGreaterThan.h"; path = "Expecta/Matchers/EXPMatchers+beGreaterThan.h"; sourceTree = "<group>"; };
 		A833BC98F95E74ABFF866C85B3FC9338 /* EXPMatchers+raiseWithReason.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+raiseWithReason.h"; path = "Expecta/Matchers/EXPMatchers+raiseWithReason.h"; sourceTree = "<group>"; };
@@ -363,6 +361,7 @@
 		C685971A6CB0538D27790478B960CFD8 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
 		C6C7CD39279BCFD392135DCF45F61F03 /* EXPMatchers+beSupersetOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beSupersetOf.m"; path = "Expecta/Matchers/EXPMatchers+beSupersetOf.m"; sourceTree = "<group>"; };
 		C93D23F4DB7569CC800036F3F8FAFE2E /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC772D832F84D77D6B70692F8CD8FB4E /* CoordinateContainer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CoordinateContainer.m; sourceTree = "<group>"; };
 		CD486E43B7465271EE4EBCB98E5DAF8D /* EXPFloatTuple.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPFloatTuple.h; path = Expecta/EXPFloatTuple.h; sourceTree = "<group>"; };
 		CD7582733015B7D005A247EF5856A0D6 /* EXPMatchers+beLessThanOrEqualTo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beLessThanOrEqualTo.m"; path = "Expecta/Matchers/EXPMatchers+beLessThanOrEqualTo.m"; sourceTree = "<group>"; };
 		D148E142A756A0CD8BA055B657862814 /* Expecta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Expecta.h; path = Expecta/Expecta.h; sourceTree = "<group>"; };
@@ -383,6 +382,7 @@
 		DF4BD2050ABE1205D1B1A164803A18DA /* EXPMatchers+beKindOf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beKindOf.h"; path = "Expecta/Matchers/EXPMatchers+beKindOf.h"; sourceTree = "<group>"; };
 		E42AB63F84DC20AD246EB8FFA3EFEF2C /* SPTSharedExampleGroups.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTSharedExampleGroups.m; path = Specta/Specta/SPTSharedExampleGroups.m; sourceTree = "<group>"; };
 		E47922AA0F6D472C6BD29B15DF2DE148 /* Expecta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Expecta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4A3AEDCC3543C55DAB4F2F31234CF77 /* CoordinateContainer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CoordinateContainer.h; sourceTree = "<group>"; };
 		E5970E5D763F65673B9F5F4C5D0A9D0F /* SPTExample.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTExample.h; path = Specta/Specta/SPTExample.h; sourceTree = "<group>"; };
 		E5B05516F560C08699BF135F729DD5E4 /* SPTExampleGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTExampleGroup.h; path = Specta/Specta/SPTExampleGroup.h; sourceTree = "<group>"; };
 		E82B21750F87AD93EC4D1461EA6B1A0A /* MTCoordinatorView-objc.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "MTCoordinatorView-objc.modulemap"; sourceTree = "<group>"; };
@@ -418,6 +418,14 @@
 				81F30F14BE5F521419A9843F14A99258 /* Foundation.framework in Frameworks */,
 				FE4FCA167AC3BEFA21D8E58F21581304 /* Specta.framework in Frameworks */,
 				0B9005849CC23A5C53046C41771900B4 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DBA25AAD6EB8E3B4DD1818715F4AFE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADA040DBA9097068AEF4D860916C75F5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,14 +466,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F5C66E9302E385DB64A86C5BAC53B397 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				841FD17A1A06B1CFA3E3B8CF6DABF62D /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FB1DE062C4ADB3A60E764FE81A06F70A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -486,6 +486,17 @@
 				C29C93E7F175EC9CDE6E55BE676C8B75 /* Specta */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		0A1B6DC071B5B4400D923CFC605881D3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E4A3AEDCC3543C55DAB4F2F31234CF77 /* CoordinateContainer.h */,
+				CC772D832F84D77D6B70692F8CD8FB4E /* CoordinateContainer.m */,
+				8C9B7685C57C643D9EBAD0B375C42FDA /* CoordinateManager.h */,
+				A2BF47FE690CDC1B662DED39FFB1B4F7 /* CoordinateManager.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		11D5D3055BB27850F2162E13D4BE3CA2 /* Products */ = {
@@ -511,14 +522,6 @@
 				922DE448D48A857562C0B1637BCEDDE6 /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		24B3E3D7E904D03CBD362022670FB54F /* MTCoordinatorView-objc */ = {
-			isa = PBXGroup;
-			children = (
-				D6CAFB8E3ED2431F5C9C05695DC444FD /* Classes */,
-			);
-			path = "MTCoordinatorView-objc";
 			sourceTree = "<group>";
 		};
 		25569E96824C4F1200539B5948CEF428 /* Support Files */ = {
@@ -696,6 +699,14 @@
 			);
 			sourceTree = "<group>";
 		};
+		912B7CC4DAA52EA533FEE4D158C57075 /* MTCoordinatorView-objc */ = {
+			isa = PBXGroup;
+			children = (
+				0A1B6DC071B5B4400D923CFC605881D3 /* Classes */,
+			);
+			path = "MTCoordinatorView-objc";
+			sourceTree = "<group>";
+		};
 		922DE448D48A857562C0B1637BCEDDE6 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -774,21 +785,10 @@
 			path = "Expecta+Snapshots";
 			sourceTree = "<group>";
 		};
-		D6CAFB8E3ED2431F5C9C05695DC444FD /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				8949A56D1D7F2085002F4BD7 /* CoordinateContainer.h */,
-				8949A56E1D7F2085002F4BD7 /* CoordinateContainer.m */,
-				8949A56F1D7F2085002F4BD7 /* CoordinateManager.h */,
-				8949A5701D7F2085002F4BD7 /* CoordinateManager.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		E29E82153DAA53CDF282B121F6E14201 /* MTCoordinatorView-objc */ = {
 			isa = PBXGroup;
 			children = (
-				24B3E3D7E904D03CBD362022670FB54F /* MTCoordinatorView-objc */,
+				912B7CC4DAA52EA533FEE4D158C57075 /* MTCoordinatorView-objc */,
 				BCB3BB10CB8A60A4680973A4FFBC7859 /* Support Files */,
 			);
 			name = "MTCoordinatorView-objc";
@@ -856,14 +856,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		003091ADD8A706F09AC68059738C2D5B /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C5FC0161D53FDFC0A40DABE1AB8EA3D3 /* MTCoordinatorView-objc-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		05EDA95738C6738A49B08C19D0406CB4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -892,6 +884,16 @@
 				B1A21DB7494006EA8646A9897878AD64 /* SPTTestSuite.h in Headers */,
 				49898689E296C586F24740CD60B5B6BA /* XCTest+Private.h in Headers */,
 				9E0339311A6FFD778639E434E5683F96 /* XCTestCase+Specta.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F01E76DCB991307ED5E09261B2BF972 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9694D5930497F2FCDB95A84D1DB4AC6 /* CoordinateContainer.h in Headers */,
+				54065BC9EA8BEA4547C508C8161654B2 /* CoordinateManager.h in Headers */,
+				3D98CADE26F164088E7F19E396A433D6 /* MTCoordinatorView-objc-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -943,8 +945,6 @@
 				6E1D978790705E137FDE439AA68DD3AA /* EXPFloatTuple.h in Headers */,
 				65BC31095CCDFC80CBF6BBA843751F23 /* EXPMatcher.h in Headers */,
 				8C8C1B0D83FE6A4352F15154DB16372C /* EXPMatcherHelpers.h in Headers */,
-				8949A5711D7F2085002F4BD7 /* CoordinateContainer.h in Headers */,
-				8949A5731D7F2085002F4BD7 /* CoordinateManager.h in Headers */,
 				AF1F46668D4591602887998C6E9C10AD /* EXPMatchers+beCloseTo.h in Headers */,
 				F41209A94070904A00BDF24ACB6336B6 /* EXPMatchers+beFalsy.h in Headers */,
 				FD2D4497BC41412128C2D87C1BDE7398 /* EXPMatchers+beginWith.h in Headers */,
@@ -1013,23 +1013,6 @@
 			name = "Pods-MTCoordinatorView-objc_Example";
 			productName = "Pods-MTCoordinatorView-objc_Example";
 			productReference = E87F51AFE1D49F5D39B4F4458D6F0E6F /* Pods_MTCoordinatorView_objc_Example.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		117304345C5768700DFA1C4121D8ACC0 /* MTCoordinatorView-objc */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 582EB6D800C5694B76A861C6D1336257 /* Build configuration list for PBXNativeTarget "MTCoordinatorView-objc" */;
-			buildPhases = (
-				0ADBF9DD5BE295A06C8274394B32A38D /* Sources */,
-				F5C66E9302E385DB64A86C5BAC53B397 /* Frameworks */,
-				003091ADD8A706F09AC68059738C2D5B /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "MTCoordinatorView-objc";
-			productName = "MTCoordinatorView-objc";
-			productReference = D3FC5B30908B3BD66A37BC5DC027E0BF /* MTCoordinatorView_objc.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		1DC9E1D9BEE7CF1F08ACF0382F326E0E /* Pods-MTCoordinatorView-objc_Tests */ = {
@@ -1107,6 +1090,23 @@
 			productReference = A3DCA22418462A5FB61DC3990741E510 /* FBSnapshotTestCase.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		D2FAF3B045AC73D3B54C5BB832983AB6 /* MTCoordinatorView-objc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D85A610A00FD2EC2313FACF297E02951 /* Build configuration list for PBXNativeTarget "MTCoordinatorView-objc" */;
+			buildPhases = (
+				1B5C1356D7A2BE6DF552658CACB52E3D /* Sources */,
+				7DBA25AAD6EB8E3B4DD1818715F4AFE6 /* Frameworks */,
+				0F01E76DCB991307ED5E09261B2BF972 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MTCoordinatorView-objc";
+			productName = "MTCoordinatorView-objc";
+			productReference = D3FC5B30908B3BD66A37BC5DC027E0BF /* MTCoordinatorView_objc.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1131,7 +1131,7 @@
 				0D888F29E05E498D0CD91A51D28599A5 /* Expecta */,
 				87312DE5EE228BC5742AA21B44ECF379 /* Expecta+Snapshots */,
 				AB055CDABAD5D9BD7C72D6FC05881DEF /* FBSnapshotTestCase */,
-				117304345C5768700DFA1C4121D8ACC0 /* MTCoordinatorView-objc */,
+				D2FAF3B045AC73D3B54C5BB832983AB6 /* MTCoordinatorView-objc */,
 				0F2D073953B5B9E8C022730E09A4A9FA /* Pods-MTCoordinatorView-objc_Example */,
 				1DC9E1D9BEE7CF1F08ACF0382F326E0E /* Pods-MTCoordinatorView-objc_Tests */,
 				9FDDE8D5ECE7024BE544CD9C2B8820C0 /* Specta */,
@@ -1140,11 +1140,13 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0ADBF9DD5BE295A06C8274394B32A38D /* Sources */ = {
+		1B5C1356D7A2BE6DF552658CACB52E3D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29E484AB194748561FA32B96763667BB /* MTCoordinatorView-objc-dummy.m in Sources */,
+				E31659C8BCFAC7C76ED9386EC1671F49 /* CoordinateContainer.m in Sources */,
+				960F4C2D00113F587C0C317C9CD50A9B /* CoordinateManager.m in Sources */,
+				F0DD7DADE310C18D475CBE516CAA2F7C /* MTCoordinatorView-objc-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1215,7 +1217,6 @@
 				BA12B131F10BCE3BE6E9A02FC908FE9D /* EXPMatchers+beCloseTo.m in Sources */,
 				17572374B2AE183C6347C41E8DF8E579 /* EXPMatchers+beFalsy.m in Sources */,
 				F12D57414A73406831CC032A7170DBFF /* EXPMatchers+beginWith.m in Sources */,
-				8949A5721D7F2085002F4BD7 /* CoordinateContainer.m in Sources */,
 				1312A7D381C51428CF481E33E3D37901 /* EXPMatchers+beGreaterThan.m in Sources */,
 				1B0389CD88AA949B34DC7269030FEC6F /* EXPMatchers+beGreaterThanOrEqualTo.m in Sources */,
 				66A27898E989A3FA5C15AA671C4536F0 /* EXPMatchers+beIdenticalTo.m in Sources */,
@@ -1226,7 +1227,6 @@
 				D83677C54D2226C67886A525B0B46FBE /* EXPMatchers+beLessThanOrEqualTo.m in Sources */,
 				2C0A8737FDB9B9C6A6BDF437FD11334C /* EXPMatchers+beNil.m in Sources */,
 				BEFFE9FFE52E9A0833A7D2D8FB67EB4D /* EXPMatchers+beSubclassOf.m in Sources */,
-				8949A5741D7F2085002F4BD7 /* CoordinateManager.m in Sources */,
 				6F278423C8AE1DA47F35E374BB5B91EC /* EXPMatchers+beSupersetOf.m in Sources */,
 				0C6FF91EB1F0391ED75DC72D31D159EF /* EXPMatchers+beTruthy.m in Sources */,
 				DB30F82FB1BE083D9471B965FB500CA2 /* EXPMatchers+conformTo.m in Sources */,
@@ -1276,7 +1276,7 @@
 		6D870CF94DBB550A0476F0B4CE9A17C9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "MTCoordinatorView-objc";
-			target = 117304345C5768700DFA1C4121D8ACC0 /* MTCoordinatorView-objc */;
+			target = D2FAF3B045AC73D3B54C5BB832983AB6 /* MTCoordinatorView-objc */;
 			targetProxy = 2805263D10F955512E5D3B5F20402E97 /* PBXContainerItemProxy */;
 		};
 		874C6D048C1707CB464F4A220C6A95AC /* PBXTargetDependency */ = {
@@ -1335,7 +1335,7 @@
 			};
 			name = Release;
 		};
-		0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */ = {
+		47BEF9D903506B003EA5C2B249729489 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1353,87 +1353,29 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
-		};
-		17FF024C17E17185901CCBD64F312662 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2243A8089801DDF6BF40FC77C4457F94 /* MTCoordinatorView-objc.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MTCoordinatorView-objc/MTCoordinatorView-objc-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MTCoordinatorView-objc/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MTCoordinatorView-objc/MTCoordinatorView-objc.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = MTCoordinatorView_objc;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		1B9C6EE903B5A2825156C8E384C8DB3C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F789CE970C46BDA663B8B5EDD5FB52F5 /* Pods-MTCoordinatorView-objc_Example.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MTCoordinatorView-objc_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MTCoordinatorView-objc_Example/Pods-MTCoordinatorView-objc_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MTCoordinatorView_objc_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
+			name = Debug;
 		};
 		5C199A70C50597D686C0D9DEE13040AA /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1522,35 +1464,6 @@
 			};
 			name = Debug;
 		};
-		8626B60376BF3403202AAFE951A7B08A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2243A8089801DDF6BF40FC77C4457F94 /* MTCoordinatorView-objc.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MTCoordinatorView-objc/MTCoordinatorView-objc-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MTCoordinatorView-objc/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MTCoordinatorView-objc/MTCoordinatorView-objc.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = MTCoordinatorView_objc;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		86B3AF85DF2958967D7E96849C2BE84C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A193DEFA4D1CD24BE0FE7815E44EC372 /* Expecta.xcconfig */;
@@ -1580,40 +1493,36 @@
 			};
 			name = Debug;
 		};
-		A70224EA4846D941635362238B2012A7 /* Debug */ = {
+		88D81944A38F82A38FC0FA6121FD19A7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1EE4F4C3129FFA2D83A8EA6A9180E2FF /* Pods-MTCoordinatorView-objc_Example.debug.xcconfig */;
+			baseConfigurationReference = 2243A8089801DDF6BF40FC77C4457F94 /* MTCoordinatorView-objc.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MTCoordinatorView-objc_Example/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/MTCoordinatorView-objc/MTCoordinatorView-objc-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MTCoordinatorView-objc/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MTCoordinatorView-objc_Example/Pods-MTCoordinatorView-objc_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MTCoordinatorView_objc_Example;
+				MODULEMAP_FILE = "Target Support Files/MTCoordinatorView-objc/MTCoordinatorView-objc.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MTCoordinatorView_objc;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		A745921030B79960EEA8B57CBBEC67A6 /* Debug */ = {
+		89AF1F8C35BF23CC8821D104FD70AF63 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D775CDA8C0D753F3BFB9193830961687 /* Pods-MTCoordinatorView-objc_Tests.debug.xcconfig */;
 			buildSettings = {
@@ -1628,7 +1537,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-MTCoordinatorView-objc_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-MTCoordinatorView-objc_Tests/Pods-MTCoordinatorView-objc_Tests.modulemap";
@@ -1646,6 +1555,106 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		8F1C17FDE386FED7510C0DB7C66D1061 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E8814D8F5644A89F14161F9BE4C9C60 /* Pods-MTCoordinatorView-objc_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MTCoordinatorView-objc_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MTCoordinatorView-objc_Tests/Pods-MTCoordinatorView-objc_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MTCoordinatorView_objc_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9DB3FE0617FC3C21428101AE9FB2E12B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2243A8089801DDF6BF40FC77C4457F94 /* MTCoordinatorView-objc.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MTCoordinatorView-objc/MTCoordinatorView-objc-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MTCoordinatorView-objc/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MTCoordinatorView-objc/MTCoordinatorView-objc.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MTCoordinatorView_objc;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AAF678CED40D3499169D10F63CA0719E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
 		};
 		C227992525B1212103CB75D082CFFB18 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1706,78 +1715,36 @@
 			};
 			name = Debug;
 		};
-		CC545B686F1A2C8134F9814C9208BD6E /* Release */ = {
+		D3C27F9D1A31401E123859F4E4BEA381 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E8814D8F5644A89F14161F9BE4C9C60 /* Pods-MTCoordinatorView-objc_Tests.release.xcconfig */;
+			baseConfigurationReference = 1EE4F4C3129FFA2D83A8EA6A9180E2FF /* Pods-MTCoordinatorView-objc_Example.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MTCoordinatorView-objc_Tests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-MTCoordinatorView-objc_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MTCoordinatorView-objc_Tests/Pods-MTCoordinatorView-objc_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MODULEMAP_FILE = "Target Support Files/Pods-MTCoordinatorView-objc_Example/Pods-MTCoordinatorView-objc_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MTCoordinatorView_objc_Tests;
+				PRODUCT_NAME = Pods_MTCoordinatorView_objc_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_DEBUG=1",
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				ONLY_ACTIVE_ARCH = YES;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
@@ -1810,6 +1777,39 @@
 			};
 			name = Release;
 		};
+		F253CD0469610E11BE91E2B1A6DD8085 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F789CE970C46BDA663B8B5EDD5FB52F5 /* Pods-MTCoordinatorView-objc_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MTCoordinatorView-objc_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MTCoordinatorView-objc_Example/Pods-MTCoordinatorView-objc_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MTCoordinatorView_objc_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1825,8 +1825,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */,
-				0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */,
+				47BEF9D903506B003EA5C2B249729489 /* Debug */,
+				AAF678CED40D3499169D10F63CA0719E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1834,8 +1834,8 @@
 		43B968D89356DB30F6F8ABC0DEAE7DFC /* Build configuration list for PBXNativeTarget "Pods-MTCoordinatorView-objc_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A745921030B79960EEA8B57CBBEC67A6 /* Debug */,
-				CC545B686F1A2C8134F9814C9208BD6E /* Release */,
+				89AF1F8C35BF23CC8821D104FD70AF63 /* Debug */,
+				8F1C17FDE386FED7510C0DB7C66D1061 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1849,20 +1849,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		582EB6D800C5694B76A861C6D1336257 /* Build configuration list for PBXNativeTarget "MTCoordinatorView-objc" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8626B60376BF3403202AAFE951A7B08A /* Debug */,
-				17FF024C17E17185901CCBD64F312662 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		5E277F405911B47DACEBEC301E41C378 /* Build configuration list for PBXNativeTarget "Pods-MTCoordinatorView-objc_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A70224EA4846D941635362238B2012A7 /* Debug */,
-				1B9C6EE903B5A2825156C8E384C8DB3C /* Release */,
+				D3C27F9D1A31401E123859F4E4BEA381 /* Debug */,
+				F253CD0469610E11BE91E2B1A6DD8085 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1872,6 +1863,15 @@
 			buildConfigurations = (
 				C227992525B1212103CB75D082CFFB18 /* Debug */,
 				093A4682240AAAE717943BC33FE6500E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D85A610A00FD2EC2313FACF297E02951 /* Build configuration list for PBXNativeTarget "MTCoordinatorView-objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DB3FE0617FC3C21428101AE9FB2E12B /* Debug */,
+				88D81944A38F82A38FC0FA6121FD19A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

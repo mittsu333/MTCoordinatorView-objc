@@ -6,7 +6,7 @@ target 'MTCoordinatorView-objc_Example' do
   target 'MTCoordinatorView-objc_Tests' do
     inherit! :search_paths
 
-    pod 'Specta'
+  pod 'Specta'
   pod 'Expecta'
   pod 'FBSnapshotTestCase'
   pod 'Expecta+Snapshots'

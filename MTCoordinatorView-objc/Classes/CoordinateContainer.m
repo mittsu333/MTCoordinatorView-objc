@@ -36,6 +36,7 @@
 
 - (void)initialize:(UIView *)contents endForm:(CGRect)endForm completion:(TapCompletion)completion
 {
+    _topPadding = 0;
     _startForm = contents.frame;
     _endForm = endForm;
     self.frame = _startForm;
