@@ -68,21 +68,23 @@
     }
 }
 
-- (void)setContainer:(UIScrollView *)scroll views:(CoordinateContainer *)views, ...NS_REQUIRES_NIL_TERMINATION
+- (void)setContainer:(UIScrollView *)scroll views:(NSArray<CoordinateContainer *> *)views
 {
-    va_list args;
-    NSMutableArray* tmp = [NSMutableArray array];
+//    va_list args;
+//    NSMutableArray* tmp = [NSMutableArray array];
+//    
+//    va_start(args, views);
+//    __unsafe_unretained id obj = views;
+//    
+//    while(obj){
+//        [tmp addObject:obj];
+//        obj = va_arg(args, typeof(id));
+//    }
+//    va_end(args);
+//    
+//    _viewArray = [tmp copy];
     
-    va_start(args, views);
-    __unsafe_unretained id obj = views;
-    
-    while(obj){
-        [tmp addObject:obj];
-        obj = va_arg(args, typeof(id));
-    }
-    va_end(args);
-    
-    _viewArray = [tmp copy];
+    _viewArray = views;
     [_viewArray enumerateObjectsUsingBlock:^(CoordinateContainer *view, NSUInteger idx, BOOL *stop){
         if(!view){
             *stop = YES;
@@ -176,7 +178,6 @@
             if(overScroll >= MAX(xxx, yyy)){
                 ratio = 0;
             }
-            
             
             [view scrolledToAbove:ratio scroll:overScroll];
         }

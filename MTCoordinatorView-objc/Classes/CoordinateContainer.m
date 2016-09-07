@@ -13,11 +13,12 @@
 @property (copy, nonatomic) TapCompletion completion;
 @property (strong, nonatomic) UITapGestureRecognizer *tapGestureRecognizer;
 
-@property (weak, readwrite, nonatomic) UIView *contentsView;
+@property (strong, readwrite, nonatomic) UIView *contentsView;
 
 @property (assign, nonatomic) CGRect startForm;
 @property (assign, nonatomic) CGRect endForm;
 
+@property (assign, nonatomic) float cornerRadius;
 @property (assign, nonatomic) float topPadding;
 
 @end
@@ -26,15 +27,15 @@
 
 #pragma mark - init
 
-- (id)initView:(UIView *)contents endForm:(CGRect)endForm completion:(TapCompletion)completion
+- (id)initView:(UIView *)contents endForm:(CGRect)endForm corner:(float)corner completion:(TapCompletion)completion
 {
     if(self = [super init]){
-        [self initialize:contents endForm:endForm completion:completion];
+        [self initialize:contents endForm:endForm corner:corner completion:completion];
     }
     return self;
 }
 
-- (void)initialize:(UIView *)contents endForm:(CGRect)endForm completion:(TapCompletion)completion
+- (void)initialize:(UIView *)contents endForm:(CGRect)endForm corner:(float)corner completion:(TapCompletion)completion
 {
     _topPadding = 0;
     _startForm = contents.frame;
@@ -43,6 +44,10 @@
     _contentsView = contents;
     _contentsView.frame = CGRectMake(0, 0, _startForm.size.width, _startForm.size.height);
     [self addSubview:_contentsView];
+    
+    if(corner > 0 && corner <= 1){
+        _cornerRadius = corner;
+    }
     
     _tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapEvent)];
     _tapGestureRecognizer.delegate = self;
@@ -87,7 +92,7 @@
     if(ratio < 0 || ratio > 1){
         ratio = 0;
     }
-//    NSLog(@"above ratio: %f", ratio);
+    NSLog(@"above ratio: %f", ratio);
     float newX = _endForm.origin.x + ((_startForm.origin.x - _endForm.origin.x) * ratio);
     float newY = _endForm.origin.y + ((_startForm.origin.y - _endForm.origin.y) * ratio);
     float newW = _endForm.size.width + ((_startForm.size.width - _endForm.size.width) * ratio);
@@ -102,16 +107,33 @@
     CGRect newRect = CGRectMake(newX, newY, newW, newH);
     self.frame = newRect;
     _contentsView.frame = CGRectMake(0, 0, newW, newH);
+    
+    if(_cornerRadius > 0){
+        float newRadius = MAX(newW, newH) * _cornerRadius;
+//        NSLog(@"above radius: %f", newRadius);
+        self.layer.cornerRadius = newRadius;
+        _contentsView.layer.cornerRadius = newRadius;
+    }
 }
 
 - (void)scrolledToBelow:(float)ratio scroll:(float)scroll
 {
 //    NSLog(@"below ratio: %f", ratio);
+    float newW = _startForm.size.width * fabs(ratio);
+    float newH = _startForm.size.height * fabs(ratio);
+    
     self.frame = CGRectMake(_startForm.origin.x,
                             _startForm.origin.y * fabs(ratio),
-                            _startForm.size.width * fabs(ratio),
-                            _startForm.size.height * fabs(ratio));
-    _contentsView.frame = CGRectMake(0, 0, _startForm.size.width * fabs(ratio), _startForm.size.height * fabs(ratio));
+                            newW, newH);
+    _contentsView.frame = CGRectMake(0, 0, newW, newH);
+    
+    if(_cornerRadius > 0){
+        float newRadius = MAX(newW, newH) * _cornerRadius;
+        //        NSLog(@"above radius: %f", newRadius);
+        self.layer.cornerRadius = newRadius;
+        _contentsView.layer.cornerRadius = newRadius;
+    }
+    
 }
 
 //- (void)scrolledToLeft:(float)ratio

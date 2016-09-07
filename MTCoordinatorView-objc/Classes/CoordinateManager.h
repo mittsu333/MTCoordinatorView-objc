@@ -14,7 +14,7 @@
 - (id)init __attribute__((unavailable("init is not available")));
 - (id)initMainContents:(UIViewController *)viewController scroll:(UIScrollView *)scrollView header:(UIView *)headerView;
 
-- (void)setContainer:(UIScrollView *)scroll views:(CoordinateContainer *)views, ...NS_REQUIRES_NIL_TERMINATION;
+- (void)setContainer:(UIScrollView *)scroll views:(NSArray<CoordinateContainer *> *)views;
 - (void)scrolledDetection:(UIScrollView *)scrollView;
 
 @end
