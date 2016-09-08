@@ -121,11 +121,12 @@
 //    NSLog(@"below ratio: %f", ratio);
     float newW = _startForm.size.width * fabs(ratio);
     float newH = _startForm.size.height * fabs(ratio);
+    float smoothX = (_startForm.size.width - newW) / 2;
     
     self.frame = CGRectMake(_startForm.origin.x,
                             _startForm.origin.y * fabs(ratio),
                             newW, newH);
-    _contentsView.frame = CGRectMake(0, 0, newW, newH);
+    _contentsView.frame = CGRectMake(smoothX, 0, newW, newH);
     
     if(_cornerRadius > 0){
         float newRadius = MAX(newW, newH) * _cornerRadius;
