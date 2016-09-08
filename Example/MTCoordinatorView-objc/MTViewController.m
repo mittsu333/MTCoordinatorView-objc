@@ -60,7 +60,8 @@
     CoordinateContainer *secondView = [self createSecondView];
     
     // set views
-    [_coordinateManager setContainer:table views:firstView, secondView, nil];
+    [_coordinateManager setContainer:table views:secondView, nil];
+//    [_coordinateManager setContainer:table views:firstView, secondView, nil];
     
     [self.view addSubview:table];
 }
@@ -122,9 +123,9 @@
     // create childview contents
     UIImage *img = [UIImage imageNamed:@"sample-button"];
     UIImageView *btnView = [[UIImageView alloc] initWithImage:img];
-    btnView.frame = CGRectMake(self.view.frame.size.width - 100, self.view.frame.size.height + 150, 0, 0);
+    btnView.frame = CGRectMake(self.view.frame.size.width - 100, self.view.frame.size.height+100, 0, 0);
     
-    CoordinateContainer *secondChildView = [[CoordinateContainer alloc]initView:btnView endForm:CGRectMake(self.view.frame.size.width - 100, self.view.frame.size.height - 100, 50, 50) corner:0.0 completion:^(void){
+    CoordinateContainer *secondChildView = [[CoordinateContainer alloc]initView:btnView endForm:CGRectMake(self.view.frame.size.width - 100, self.view.frame.size.height, 50, 50) corner:0.0 completion:^(void){
         [self tapEvent:@"Tap Event 2"];
     }];
     

@@ -157,7 +157,7 @@
                 ratioY = 1;
             }
             
-            float ratio = MAX(ratioX, ratioY);
+            float ratio = MIN(ratioX, ratioY);
             
             if(ratioX == 1 && ratioY == 1){
                 float maxW = MAX(view.startForm.size.width, view.endForm.size.width);

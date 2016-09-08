@@ -18,8 +18,9 @@
 @property (assign, nonatomic) CGRect startForm;
 @property (assign, nonatomic) CGRect endForm;
 
-@property (assign, nonatomic) float cornerRadius;
 @property (assign, nonatomic) float topPadding;
+@property (assign, nonatomic) float cornerRadius;
+@property (assign, nonatomic) float scrollDifference;
 
 @end
 
@@ -89,6 +90,7 @@
 
 - (void)scrolledToAbove:(float)ratio scroll:(float)scroll
 {
+    NSLog(@"scrolledToAbove:%f  --- | %f", _scrollDifference, scroll);
     if(ratio < 0 || ratio > 1){
         ratio = 0;
     }
@@ -97,10 +99,18 @@
     float newW = _endForm.size.width + ((_startForm.size.width - _endForm.size.width) * ratio);
     float newH = _endForm.size.height + ((_startForm.size.height - _endForm.size.height) * ratio);
     
-    if(_startForm.origin.y < _endForm.origin.y){
+    if(ratio == 0 && _scrollDifference != 0){
+        newY += _topPadding + scroll - _scrollDifference;
+    }else if(_startForm.origin.y < _endForm.origin.y){
         newY += scroll;
     }else if((newY - _topPadding) < _endForm.origin.y){
         newY = self.frame.origin.y;
+    }
+    
+    if(ratio == 0 && _scrollDifference == 0){
+        _scrollDifference = scroll;
+    }else if(ratio != 0 && _scrollDifference != 0){
+        _scrollDifference = 0;
     }
     
     CGRect newRect = CGRectMake(newX, newY, newW, newH);
