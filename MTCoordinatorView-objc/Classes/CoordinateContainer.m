@@ -92,7 +92,6 @@
     if(ratio < 0 || ratio > 1){
         ratio = 0;
     }
-    NSLog(@"above ratio: %f", ratio);
     float newX = _endForm.origin.x + ((_startForm.origin.x - _endForm.origin.x) * ratio);
     float newY = _endForm.origin.y + ((_startForm.origin.y - _endForm.origin.y) * ratio);
     float newW = _endForm.size.width + ((_startForm.size.width - _endForm.size.width) * ratio);
@@ -110,7 +109,6 @@
     
     if(_cornerRadius > 0){
         float newRadius = MAX(newW, newH) * _cornerRadius;
-//        NSLog(@"above radius: %f", newRadius);
         self.layer.cornerRadius = newRadius;
         _contentsView.layer.cornerRadius = newRadius;
     }
@@ -118,7 +116,6 @@
 
 - (void)scrolledToBelow:(float)ratio scroll:(float)scroll
 {
-//    NSLog(@"below ratio: %f", ratio);
     float newW = _startForm.size.width * fabs(ratio);
     float newH = _startForm.size.height * fabs(ratio);
     float smoothX = (_startForm.size.width - newW) / 2;
@@ -130,7 +127,6 @@
     
     if(_cornerRadius > 0){
         float newRadius = MAX(newW, newH) * _cornerRadius;
-        //        NSLog(@"above radius: %f", newRadius);
         self.layer.cornerRadius = newRadius;
         _contentsView.layer.cornerRadius = newRadius;
     }

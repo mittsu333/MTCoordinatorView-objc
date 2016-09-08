@@ -68,23 +68,21 @@
     }
 }
 
-- (void)setContainer:(UIScrollView *)scroll views:(NSArray<CoordinateContainer *> *)views
+- (void)setContainer:(UIScrollView *)scroll views:(CoordinateContainer *)views, ...NS_REQUIRES_NIL_TERMINATION
 {
-//    va_list args;
-//    NSMutableArray* tmp = [NSMutableArray array];
-//    
-//    va_start(args, views);
-//    __unsafe_unretained id obj = views;
-//    
-//    while(obj){
-//        [tmp addObject:obj];
-//        obj = va_arg(args, typeof(id));
-//    }
-//    va_end(args);
-//    
-//    _viewArray = [tmp copy];
+    va_list args;
+    NSMutableArray* tmp = [NSMutableArray array];
     
-    _viewArray = views;
+    va_start(args, views);
+    __unsafe_unretained id obj = views;
+    
+    while(obj){
+        [tmp addObject:obj];
+        obj = va_arg(args, typeof(id));
+    }
+    va_end(args);
+    _viewArray = [tmp copy];
+    
     [_viewArray enumerateObjectsUsingBlock:^(CoordinateContainer *view, NSUInteger idx, BOOL *stop){
         if(!view){
             *stop = YES;
@@ -146,36 +144,28 @@
         if(!view){
             *stop = YES;
         }else{
-            float sy = view.startForm.origin.y;
-            float ey = view.endForm.origin.y;
-            float yyy = (MAX(sy, ey) - MIN(sy, ey));
-            float ratioY = 1 - (overScroll / yyy);
+            float diffX = MAX(view.startForm.origin.x, view.endForm.origin.x) - MIN(view.startForm.origin.x, view.endForm.origin.x);
+            float diffY = MAX(view.startForm.origin.y, view.endForm.origin.y) - MIN(view.startForm.origin.y, view.endForm.origin.y);
+            
+            float ratioX = 1 - (overScroll / diffX);
+            if(ratioX == -INFINITY){
+                ratioX = 1;
+            }
+
+            float ratioY = 1 - (overScroll / diffY);
             if(ratioY == -INFINITY){
                 ratioY = 1;
             }
             
-            float sx = view.startForm.origin.x;
-            float ex = view.endForm.origin.x;
-            float xxx = (MAX(sx, ex) - MIN(sx, ex));
-            float ratioX = 1 - (overScroll / (MAX(sx, ex) - MIN(sx, ex)));
-            if(ratioX == -INFINITY){
-                ratioX = 1;
-            }
             float ratio = MAX(ratioX, ratioY);
             
             if(ratioX == 1 && ratioY == 1){
-                float sw = view.startForm.size.width;
-                float ew = view.endForm.size.width;
-                float sh = view.startForm.size.height;
-                float eh = view.endForm.size.height;
-                
-                float maxW = MAX(sw, ew);
-                float maxH = MAX(sh, eh);
-                
+                float maxW = MAX(view.startForm.size.width, view.endForm.size.width);
+                float maxH = MAX(view.startForm.size.height, view.endForm.size.height);
                 ratio = 1 - fabs((overScroll / maxW) * (overScroll / maxH));
             }
             
-            if(overScroll >= MAX(xxx, yyy)){
+            if(overScroll >= MAX(diffX, diffY)){
                 ratio = 0;
             }
             

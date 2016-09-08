@@ -54,31 +54,13 @@
     
     // set header view
     _coordinateManager = [[CoordinateManager alloc]initMainContents:self scroll:table header:headerView];
- 
     
-    // create childview contents
-    UIImage *iconImg = [UIImage imageNamed:@"sample-icon"];
-    UIImageView *iconView = [[UIImageView alloc] initWithImage:iconImg];
-    float centerX = self.view.frame.size.width / 2;
-    float iconSize = 110.0;
-    float startX = centerX - (iconSize / 2);
-    iconView.frame = CGRectMake(startX, 80.0, iconSize, iconSize);
-    float iconRadius = 0.5;
-    iconView.layer.cornerRadius = iconView.frame.size.width * iconRadius;
-    iconView.clipsToBounds = YES;
-    
-    iconView.layer.masksToBounds = YES;
-    iconView.layer.borderWidth = 3.0;
-    iconView.layer.borderColor = [[UIColor colorWithRed:1 green:1 blue:1 alpha:0.8] CGColor];
-    
-    CoordinateContainer *childView = [[CoordinateContainer alloc]initView:iconView endForm:CGRectMake(centerX, 120, 0, 0) corner:iconRadius completion:^(void){
-        // tap event
-        [self tapEvent:@"Tap Event 1"];
-    }];
+    // create view
+    CoordinateContainer *firstView = [self createFirstView];
+    CoordinateContainer *secondView = [self createSecondView];
     
     // set views
-    [_coordinateManager setContainer:table views:@[childView]];
-//    [_coordinateManager setContainer:table views:childView, nil];
+    [_coordinateManager setContainer:table views:firstView, secondView, nil];
     
     [self.view addSubview:table];
 }
@@ -108,6 +90,45 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     [_coordinateManager scrolledDetection:scrollView];
+}
+
+#pragma mark - create child view
+
+- (CoordinateContainer *)createFirstView
+{
+    // create childview contents
+    UIImage *img = [UIImage imageNamed:@"sample-icon"];
+    UIImageView *iconView = [[UIImageView alloc] initWithImage:img];
+    float centerX = self.view.frame.size.width / 2;
+    float iconSize = 110.0;
+    float startX = centerX - (iconSize / 2);
+    iconView.frame = CGRectMake(startX, 80.0, iconSize, iconSize);
+    float iconRadius = 0.5;
+    iconView.layer.cornerRadius = iconView.frame.size.width * iconRadius;
+    iconView.clipsToBounds = YES;
+    iconView.layer.masksToBounds = YES;
+    iconView.layer.borderWidth = 3.0;
+    iconView.layer.borderColor = [[UIColor colorWithRed:1 green:1 blue:1 alpha:0.8] CGColor];
+    
+    CoordinateContainer *firstChildView = [[CoordinateContainer alloc]initView:iconView endForm:CGRectMake(centerX, 120, 0, 0) corner:iconRadius completion:^(void){
+        [self tapEvent:@"Tap Event 1"];
+    }];
+    
+    return firstChildView;
+}
+
+- (CoordinateContainer *)createSecondView
+{
+    // create childview contents
+    UIImage *img = [UIImage imageNamed:@"sample-button"];
+    UIImageView *btnView = [[UIImageView alloc] initWithImage:img];
+    btnView.frame = CGRectMake(self.view.frame.size.width - 100, self.view.frame.size.height + 150, 0, 0);
+    
+    CoordinateContainer *secondChildView = [[CoordinateContainer alloc]initView:btnView endForm:CGRectMake(self.view.frame.size.width - 100, self.view.frame.size.height - 100, 50, 50) corner:0.0 completion:^(void){
+        [self tapEvent:@"Tap Event 2"];
+    }];
+    
+    return secondChildView;
 }
 
 #pragma mark - tap event
