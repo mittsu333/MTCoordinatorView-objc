@@ -60,13 +60,18 @@
     UIImage *iconImg = [UIImage imageNamed:@"sample-icon"];
     UIImageView *iconView = [[UIImageView alloc] initWithImage:iconImg];
     float centerX = self.view.frame.size.width / 2;
-    float iconSize = 120.0;
+    float iconSize = 110.0;
     float startX = centerX - (iconSize / 2);
-    iconView.frame = CGRectMake(startX, 100.0, iconSize, iconSize);
-    iconView.layer.cornerRadius = iconView.frame.size.width * 0.2f;
+    iconView.frame = CGRectMake(startX, 80.0, iconSize, iconSize);
+    float iconRadius = 0.5;
+    iconView.layer.cornerRadius = iconView.frame.size.width * iconRadius;
     iconView.clipsToBounds = YES;
     
-    CoordinateContainer *childView = [[CoordinateContainer alloc]initView:iconView endForm:CGRectMake(centerX, 130, 0, 0) corner:0.2 completion:^(void){
+    iconView.layer.masksToBounds = YES;
+    iconView.layer.borderWidth = 3.0;
+    iconView.layer.borderColor = [[UIColor colorWithRed:1 green:1 blue:1 alpha:0.8] CGColor];
+    
+    CoordinateContainer *childView = [[CoordinateContainer alloc]initView:iconView endForm:CGRectMake(centerX, 120, 0, 0) corner:iconRadius completion:^(void){
         // tap event
         [self tapEvent:@"Tap Event 1"];
     }];
