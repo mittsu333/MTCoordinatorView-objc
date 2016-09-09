@@ -15,6 +15,8 @@
 
 @property (strong, readwrite, nonatomic) UIView *contentsView;
 
+@property (nonatomic) kSmoothMode *smoothMode;
+
 @property (assign, nonatomic) CGRect startForm;
 @property (assign, nonatomic) CGRect endForm;
 
@@ -28,16 +30,33 @@
 
 #pragma mark - init
 
+- (id)initView:(UIView *)contents endForm:(CGRect)endForm completion:(TapCompletion)completion
+{
+    return [self initView:contents endForm:endForm corner:0.0 mode:kSmoothModeNone completion:completion];
+}
+
 - (id)initView:(UIView *)contents endForm:(CGRect)endForm corner:(float)corner completion:(TapCompletion)completion
 {
+    return [self initView:contents endForm:endForm corner:corner mode:kSmoothModeNone completion:completion];
+}
+
+- (id)initView:(UIView *)contents endForm:(CGRect)endForm mode:(kSmoothMode)mode completion:(TapCompletion)completion
+{
+    return [self initView:contents endForm:endForm corner:0.0 mode:mode completion:completion];
+}
+
+- (id)initView:(UIView *)contents endForm:(CGRect)endForm corner:(float)corner mode:(kSmoothMode)mode completion:(TapCompletion)completion
+{
     if(self = [super init]){
-        [self initialize:contents endForm:endForm corner:corner completion:completion];
+        [self initialize:contents endForm:endForm corner:corner mode:mode completion:completion];
     }
     return self;
 }
 
-- (void)initialize:(UIView *)contents endForm:(CGRect)endForm corner:(float)corner completion:(TapCompletion)completion
+- (void)initialize:(UIView *)contents endForm:(CGRect)endForm corner:(float)corner mode:(kSmoothMode)mode completion:(TapCompletion)completion
 {
+    _smoothMode = mode;
+    
     _topPadding = 0;
     _startForm = contents.frame;
     _endForm = endForm;
@@ -57,7 +76,7 @@
     self.completion = completion;
 }
 
-#pragma mark - setter
+#pragma mark - set header view
 
 - (void)setHeader:(float)systemHeight transition:(float)transitionHeight
 {
@@ -90,7 +109,6 @@
 
 - (void)scrolledToAbove:(float)ratio scroll:(float)scroll
 {
-    NSLog(@"scrolledToAbove:%f  --- | %f", _scrollDifference, scroll);
     if(ratio < 0 || ratio > 1){
         ratio = 0;
     }
@@ -107,21 +125,17 @@
         newY = self.frame.origin.y;
     }
     
-    if(ratio == 0 && _scrollDifference == 0){
-        _scrollDifference = scroll;
-    }else if(ratio != 0 && _scrollDifference != 0){
-        _scrollDifference = 0;
+    if(newW < _endForm.size.width){
+        newX += (_endForm.size.width - newW) / 2;
     }
     
     CGRect newRect = CGRectMake(newX, newY, newW, newH);
     self.frame = newRect;
     _contentsView.frame = CGRectMake(0, 0, newW, newH);
     
-    if(_cornerRadius > 0){
-        float newRadius = MAX(newW, newH) * _cornerRadius;
-        self.layer.cornerRadius = newRadius;
-        _contentsView.layer.cornerRadius = newRadius;
-    }
+    [self updateRadiusSize:newW height:newH];
+    
+    [self applySmoothMode:ratio scroll:scroll];
 }
 
 - (void)scrolledToBelow:(float)ratio scroll:(float)scroll
@@ -135,12 +149,7 @@
                             newW, newH);
     _contentsView.frame = CGRectMake(smoothX, 0, newW, newH);
     
-    if(_cornerRadius > 0){
-        float newRadius = MAX(newW, newH) * _cornerRadius;
-        self.layer.cornerRadius = newRadius;
-        _contentsView.layer.cornerRadius = newRadius;
-    }
-    
+    [self updateRadiusSize:newW height:newH];
 }
 
 //- (void)scrolledToLeft:(float)ratio
@@ -153,6 +162,31 @@
 //    
 //}
 
+#pragma mark - update raduis size
+
+- (void)updateRadiusSize:(float)width height:(float)height
+{
+    if(_cornerRadius > 0){
+        float newRadius = MAX(width, height) * _cornerRadius;
+        self.layer.cornerRadius = newRadius;
+        _contentsView.layer.cornerRadius = newRadius;
+    }
+}
+
+#pragma mark - smooth option
+
+- (void)applySmoothMode:(float)ratio scroll:(float)scroll
+{
+    if(_smoothMode != kSmoothModeFixity){
+        return;
+    }
+
+    if(ratio == 0 && _scrollDifference == 0){
+        _scrollDifference = scroll;
+    }else if(ratio != 0 && _scrollDifference != 0){
+        _scrollDifference = 0;
+    }
+}
 
 #pragma mark - tap event
 
