@@ -1,15 +1,20 @@
 # MTCoordinatorView-objc
 
-[![CI Status](http://img.shields.io/travis/mittsu/MTCoordinatorView-objc.svg?style=flat)](https://travis-ci.org/mittsu/MTCoordinatorView-objc)
 [![Version](https://img.shields.io/cocoapods/v/MTCoordinatorView-objc.svg?style=flat)](http://cocoapods.org/pods/MTCoordinatorView-objc)
 [![License](https://img.shields.io/cocoapods/l/MTCoordinatorView-objc.svg?style=flat)](http://cocoapods.org/pods/MTCoordinatorView-objc)
 [![Platform](https://img.shields.io/cocoapods/p/MTCoordinatorView-objc.svg?style=flat)](http://cocoapods.org/pods/MTCoordinatorView-objc)
 
-## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+![img_gif](https://github.com/mittsuu/MTCoordinatorView-objc/blob/master/~)
 
-## Requirements
+
+## Introduction
+
+The view coordinate arranged to the scrolling is adjusted.
+
+## Usage
+
+
 
 ## Installation
 
@@ -20,6 +25,12 @@ it, simply add the following line to your Podfile:
 pod "MTCoordinatorView-objc"
 ```
 
+## Requirements
+
+ * iOS   8.0+
+ * Xcode 8.0 
+
+
 ## License
 
-MTCoordinatorView-objc is available under the MIT license. See the LICENSE file for more info.
+MTCoordinatorView-objc is available under the MIT license. See the [LICENSE](https://github.com/mittsuu/MTCoordinatorView-objc/blob/master/LICENSE) file for more info.
