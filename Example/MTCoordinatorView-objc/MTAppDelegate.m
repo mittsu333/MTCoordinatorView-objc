@@ -18,6 +18,7 @@
     
     MTViewController *vc = [[MTViewController alloc] init];
     self.window.rootViewController = vc;
+    
     [self.window makeKeyAndVisible];
 
     return YES;

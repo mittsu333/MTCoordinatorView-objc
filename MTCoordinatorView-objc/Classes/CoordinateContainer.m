@@ -83,6 +83,9 @@
     _topPadding = systemHeight;
     _startForm = CGRectOffset(_startForm, 0, -transitionHeight);
     _endForm = CGRectOffset(_endForm, 0, -transitionHeight);
+    if(_startForm.origin.y > _endForm.origin.y){
+        _endForm = CGRectOffset(_endForm, 0, -systemHeight);
+    }
     self.frame = _startForm;
     _contentsView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
 }
@@ -105,6 +108,8 @@
 {
     self.frame = _startForm;
     _contentsView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+    [self updateRadiusSize:_startForm.size.width height:_startForm.size.width];
+
 }
 
 - (void)scrolledToAbove:(float)ratio scroll:(float)scroll
@@ -117,8 +122,13 @@
     float newW = _endForm.size.width + ((_startForm.size.width - _endForm.size.width) * ratio);
     float newH = _endForm.size.height + ((_startForm.size.height - _endForm.size.height) * ratio);
     
+    float padding = _topPadding;
+    if(_startForm.origin.y == _endForm.origin.y){
+        padding = 0;
+    }
+    
     if(ratio == 0 && _scrollDifference != 0){
-        newY += _topPadding + scroll - _scrollDifference;
+        newY += padding + scroll - _scrollDifference;
     }else if(_startForm.origin.y < _endForm.origin.y){
         newY += scroll;
     }else if((newY - _topPadding) < _endForm.origin.y){

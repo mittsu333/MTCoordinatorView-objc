@@ -158,14 +158,13 @@
             }
             
             float ratio = MIN(ratioX, ratioY);
-            
             if(ratioX == 1 && ratioY == 1){
                 float maxW = MAX(view.startForm.size.width, view.endForm.size.width);
                 float maxH = MAX(view.startForm.size.height, view.endForm.size.height);
                 ratio = 1 - fabs((overScroll / maxW) * (overScroll / maxH));
             }
             
-            if(overScroll >= MAX(diffX, diffY)){
+            if(MAX(diffX, diffY) != 0 && overScroll >= MAX(diffX, diffY)){
                 ratio = 0;
             }
             

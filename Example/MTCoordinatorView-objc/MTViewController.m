@@ -60,7 +60,6 @@
     CoordinateContainer *secondView = [self createSecondView];
     
     // set views
-//    [_coordinateManager setContainer:table views:secondView, nil];
     [_coordinateManager setContainer:table views:firstView, secondView, nil];
     
     [self.view addSubview:table];
@@ -112,7 +111,7 @@
     iconView.layer.borderColor = [[UIColor colorWithRed:1 green:1 blue:1 alpha:0.8] CGColor];
     
     CoordinateContainer *firstChildView = [[CoordinateContainer alloc]initView:iconView endForm:CGRectMake(centerX, 120, 0, 0) corner:iconRadius completion:^(void){
-        [self tapEvent:@"Tap Event 1"];
+        [self tapEvent:@"Image Tap Event"];
     }];
     
     return firstChildView;
@@ -125,8 +124,8 @@
     UIImageView *btnView = [[UIImageView alloc] initWithImage:img];
     btnView.frame = CGRectMake(self.view.frame.size.width - 70, self.view.frame.size.height + 100, 0, 0);
     
-    CoordinateContainer *secondChildView = [[CoordinateContainer alloc]initView:btnView endForm:CGRectMake(self.view.frame.size.width - 70, self.view.frame.size.height, 50, 50) mode:kSmoothModeFixity completion:^(void){
-        [self tapEvent:@"Tap Event 2"];
+    CoordinateContainer *secondChildView = [[CoordinateContainer alloc]initView:btnView endForm:CGRectMake(self.view.frame.size.width - 70, self.view.frame.size.height + 10, 50, 50) mode:kSmoothModeFixity completion:^(void){
+        [self tapEvent:@"Button Tap Event"];
     }];
     
     return secondChildView;
