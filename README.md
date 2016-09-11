@@ -55,7 +55,7 @@ MTCoordinatorView-objc is available through [CocoaPods](http://cocoapods.org). T
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "MTCoordinatorViewObjc"
+pod "MTCoordinatorView-objc"
 ```
 
 ## Requirements

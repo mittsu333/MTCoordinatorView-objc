@@ -1,8 +1,7 @@
 {
   "name": "MTCoordinatorView-objc",
-  "version": "0.1.0",
-  "summary": "A short description of MTCoordinatorView-objc.",
-  "description": "TODO: Add long description of the pod here.",
+  "version": "0.8.0",
+  "summary": "The view coordinate arranged to the scrolling is adjusted.",
   "homepage": "https://github.com/mittsuu/MTCoordinatorView-objc",
   "license": {
     "type": "MIT",
@@ -13,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/mittsuu/MTCoordinatorView-objc.git",
-    "tag": "0.1.0"
+    "tag": "0.8.0"
   },
   "platforms": {
     "ios": "8.0"

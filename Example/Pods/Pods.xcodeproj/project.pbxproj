@@ -491,10 +491,10 @@
 		0A1B6DC071B5B4400D923CFC605881D3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				8C9B7685C57C643D9EBAD0B375C42FDA /* CoordinateManager.h */,
-				A2BF47FE690CDC1B662DED39FFB1B4F7 /* CoordinateManager.m */,
 				E4A3AEDCC3543C55DAB4F2F31234CF77 /* CoordinateContainer.h */,
 				CC772D832F84D77D6B70692F8CD8FB4E /* CoordinateContainer.m */,
+				8C9B7685C57C643D9EBAD0B375C42FDA /* CoordinateManager.h */,
+				A2BF47FE690CDC1B662DED39FFB1B4F7 /* CoordinateManager.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1115,14 +1115,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
-				TargetAttributes = {
-					1DC9E1D9BEE7CF1F08ACF0382F326E0E = {
-						LastSwiftMigration = 0800;
-					};
-					AB055CDABAD5D9BD7C72D6FC05881DEF = {
-						LastSwiftMigration = 0800;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1437,7 +1429,6 @@
 				PRODUCT_NAME = FBSnapshotTestCase;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1559,7 +1550,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1593,7 +1583,6 @@
 				PRODUCT_NAME = Pods_MTCoordinatorView_objc_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1720,7 +1709,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
