@@ -15,7 +15,8 @@
 
 @property (strong, readwrite, nonatomic) UIView *contentsView;
 
-@property (nonatomic) kSmoothMode *smoothMode;
+//@property (nonatomic) kSmoothMode *smoothMode;
+@property (nonatomic) NSUInteger *smoothMode;
 
 @property (assign, nonatomic) CGRect startForm;
 @property (assign, nonatomic) CGRect endForm;

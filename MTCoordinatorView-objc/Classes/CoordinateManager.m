@@ -61,7 +61,8 @@
     float navigationBarHeight = vc.navigationController.navigationBar.frame.size.height;
     _statusNaviHeight = statusHeight + navigationBarHeight;
     
-    if(_headerView = headerView){
+    if(headerView){
+        _headerView = headerView;
         CGRect headerFrame = _headerView.frame;
         _headerViewHeight = headerFrame.size.height;
         _headerViewWidth = headerFrame.size.width;
