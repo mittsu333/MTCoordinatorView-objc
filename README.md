@@ -14,6 +14,39 @@ The view coordinate arranged to the scrolling is adjusted.
 
 ## Usage
 
+```obj-c
+// ViewController
+
+#import "CoordinateManager.h"
+#import "CoordinateContainer.h"
+
+・・・
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
+    ・・・ 'TableView' and 'Custom Header' are made beforehand. ・・・
+
+    // Manager initialize
+    CoordinateManager *coordinateManager = [[CoordinateManager alloc]initManager:self scroll:tableView header:headerView];
+
+    // create contents view.
+    UIImageView *childView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sample-image"]];
+    // set start form
+    childView.frame = CGRectMake(100, 100, 0, 0);
+    // created view is put in the 'CoordinateContainer'.
+    CoordinateContainer *containerView = [[CoordinateContainer alloc]initView:childView endForm:CGRectMake(100, 100, 50, 50) mode:kSmoothModeFixity completion:^(void){
+        // tap event callback.
+    }];
+
+    // set views
+    [coordinateManager setContainer:tableView views:containerView, nil];
+
+    // set table view
+    [self.view addSubview:table];
+}
+```
 
 
 ## Installation
@@ -22,7 +55,7 @@ MTCoordinatorView-objc is available through [CocoaPods](http://cocoapods.org). T
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "MTCoordinatorView-objc"
+pod "MTCoordinatorViewObjc"
 ```
 
 ## Requirements
