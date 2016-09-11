@@ -53,7 +53,7 @@
     headerView.image = headerImg;
     
     // set header view
-    _coordinateManager = [[CoordinateManager alloc]initMainContents:self scroll:table header:headerView];
+    _coordinateManager = [[CoordinateManager alloc]initManager:self scroll:table header:headerView];
     
     // create view
     CoordinateContainer *firstView = [self createFirstView];

@@ -12,7 +12,8 @@
 @interface CoordinateManager : UIView
 
 - (id)init __attribute__((unavailable("init is not available")));
-- (id)initMainContents:(UIViewController *)viewController scroll:(UIScrollView *)scrollView header:(UIView *)headerView;
+- (id)initManager:(UIViewController *)viewController scroll:(UIScrollView *)scrollView;
+- (id)initManager:(UIViewController *)viewController scroll:(UIScrollView *)scrollView header:(UIView *)headerView;
 
 - (void)setContainer:(UIScrollView *)scroll views:(CoordinateContainer *)views, ...NS_REQUIRES_NIL_TERMINATION;
 - (void)scrolledDetection:(UIScrollView *)scrollView;

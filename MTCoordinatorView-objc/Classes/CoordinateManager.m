@@ -30,7 +30,12 @@
 
 #pragma mark - init
 
-- (id)initMainContents:(UIViewController *)vc scroll:(UIScrollView *)scrollView header:(UIView *)headerView
+- (id)initManager:(UIViewController *)vc scroll:(UIScrollView *)scrollView
+{
+    return [self initManager:vc scroll:scrollView header:nil];
+}
+
+- (id)initManager:(UIViewController *)vc scroll:(UIScrollView *)scrollView header:(UIView *)headerView
 {
     if(self = [super init]){
         [self initialize];
