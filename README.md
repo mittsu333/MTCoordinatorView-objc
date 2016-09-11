@@ -1,11 +1,11 @@
 # MTCoordinatorView-objc
 
+![Code](https://img.shields.io/badge/code-obj--c-blue.svg)
 [![Version](https://img.shields.io/cocoapods/v/MTCoordinatorView-objc.svg?style=flat)](http://cocoapods.org/pods/MTCoordinatorView-objc)
 [![License](https://img.shields.io/cocoapods/l/MTCoordinatorView-objc.svg?style=flat)](http://cocoapods.org/pods/MTCoordinatorView-objc)
 [![Platform](https://img.shields.io/cocoapods/p/MTCoordinatorView-objc.svg?style=flat)](http://cocoapods.org/pods/MTCoordinatorView-objc)
 
-
-![img_gif](https://github.com/mittsuu/MTCoordinatorView-objc/blob/master/~)
+![img_gif](https://github.com/mittsuu/MTCoordinatorView-objc/blob/master/mtcoordinate.gif)
 
 
 ## Introduction
