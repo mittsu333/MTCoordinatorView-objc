@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = 'MTCoordinatorViewObjc'
+  s.name             = 'MTCoordinatorView-objc'
   s.version          = '0.8.0'
   s.summary          = 'The view coordinate arranged to the scrolling is adjusted.'
   s.homepage         = 'https://github.com/mittsuu/MTCoordinatorView-objc'
