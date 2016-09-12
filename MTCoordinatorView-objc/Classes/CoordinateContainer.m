@@ -108,7 +108,7 @@
 {
     self.frame = _startForm;
     _contentsView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
-    [self updateRadiusSize:_startForm.size.width height:_startForm.size.width];
+    [self updateRadiusSize:_startForm.size.width height:_startForm.size.height];
 
 }
 
