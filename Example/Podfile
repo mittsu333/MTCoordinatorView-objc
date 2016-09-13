@@ -10,5 +10,7 @@ target 'MTCoordinatorView-objc_Example' do
   pod 'Expecta'
   pod 'FBSnapshotTestCase'
   pod 'Expecta+Snapshots'
+  
+  pod 'libextobjc', '~> 0.4'
   end
 end

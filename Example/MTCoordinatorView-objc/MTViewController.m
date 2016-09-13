@@ -11,6 +11,8 @@
 #import "../../MTCoordinatorView-objc/Classes/CoordinateManager.h"
 #import "../../MTCoordinatorView-objc/Classes/CoordinateContainer.h"
 
+#import <libextobjc/EXTScope.h>
+
 @interface MTViewController ()
 
 @property NSMutableArray *sampleDataArray;
@@ -110,7 +112,9 @@
     iconView.layer.borderWidth = 3.0;
     iconView.layer.borderColor = [[UIColor colorWithRed:1 green:1 blue:1 alpha:0.8] CGColor];
     
+    @weakify(self)
     CoordinateContainer *firstChildView = [[CoordinateContainer alloc]initView:iconView endForm:CGRectMake(centerX, 120, 0, 0) corner:iconRadius completion:^(void){
+        @strongify(self)
         [self tapEvent:@"Image Tap Event"];
     }];
     
@@ -124,7 +128,9 @@
     UIImageView *btnView = [[UIImageView alloc] initWithImage:img];
     btnView.frame = CGRectMake(self.view.frame.size.width - 70, self.view.frame.size.height + 100, 0, 0);
     
+    @weakify(self)
     CoordinateContainer *secondChildView = [[CoordinateContainer alloc]initView:btnView endForm:CGRectMake(self.view.frame.size.width - 70, self.view.frame.size.height + 10, 50, 50) mode:kSmoothModeFixity completion:^(void){
+        @strongify(self)
         [self tapEvent:@"Button Tap Event"];
     }];
     
