@@ -79,7 +79,7 @@ pod "MTCoordinatorView-objc"
 
 ## See Also
 
-* MTCoordinatorView for Swift
+* MTCoordinatorView for Swift  
 https://github.com/mittsuu/MTCoordinatorView
 
 
