@@ -122,12 +122,8 @@
     float newW = _endForm.size.width + ((_startForm.size.width - _endForm.size.width) * ratio);
     float newH = _endForm.size.height + ((_startForm.size.height - _endForm.size.height) * ratio);
     
-    float padding = _topPadding;
-    if(_startForm.origin.y == _endForm.origin.y){
-        padding = 0;
-    }
-    
     if(ratio == 0 && _scrollDifference != 0){
+        float padding = _startForm.origin.y != _endForm.origin.y ? _topPadding : 0;
         newY += padding + scroll - _scrollDifference;
     }else if(_startForm.origin.y < _endForm.origin.y){
         newY += scroll;
