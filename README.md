@@ -68,13 +68,13 @@ MTCoordinatorView-objc is available through [CocoaPods](http://cocoapods.org). T
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "MTCoordinatorView-objc"
+pod 'MTCoordinatorView-objc'
 ```
 
 ## Requirements
 
  * iOS   8.0+
- * Xcode 8.0 
+ * Xcode 7.3+ 
 
 
 ## See Also
